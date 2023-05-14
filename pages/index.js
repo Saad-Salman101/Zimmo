@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import { Provider } from 'react-redux';
-import store from './store';
+import store from '../redux/store';
 
 // const Home = dynamic(() => import('../components/Home'), { ssr: false });
 // const Field = dynamic(() => import('../components/Field'), { ssr: false });
