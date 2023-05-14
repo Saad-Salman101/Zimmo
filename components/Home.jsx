@@ -5,7 +5,7 @@ import ZimoCareer from '../public/images/zimo-careers.png';
 import ZimoTeam from '../public/images/zimo-team.png'
 import ZimoInternship from '../public/images/zimo-internship.png'
 import { useSelector,useDispatch } from 'react-redux';
-
+import BackArrow from '../public/images/back-arrow.png'
 const Home = () => {
   const options = [
     { value: 'pakistan', label: 'Pakistan' },
@@ -61,8 +61,16 @@ const Home = () => {
   };
   return (
     <>
-      <div className='w-full'>
-        <div className="text-black py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">APPLY</div>
+      <div className="w-[20%]">
+        <div className="text-black text-2xl py-2 px-4 mt-4  mb-10 font-Lato font-[20px] cursor-pointer">
+          APPLY
+        </div>
+        <button >
+          {" "}
+          <div className="text-black text-2xl py-2 hidden px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+            <Image src={BackArrow} alt="" height={10} width={15} /> BACK
+          </div>
+        </button>
       </div>
       <div className='w-full flex justify-center'>
         <div className="relative flex flex-col justify-around items-center font-Lato border-2 rounded-xl border-custom-golden w-[700px] h-[400px] border-3 border-custom-golden">

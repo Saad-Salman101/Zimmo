@@ -242,7 +242,7 @@ const Form = () => {
 
             <button
               type="submit"
-              className="absolute right-[-60px] bottom-2 lg:flex items-center justify-center  h-[120px] w-[120px] bg-black text-white tracking-widest text-[14px] rounded-lg text-center uppercase"
+              className="absolute md:right-[-60px] md:bottom-2 lg:flex items-center justify-center  h-[120px] w-[120px] bg-black text-white tracking-widest text-[14px] rounded-lg text-center uppercase"
             >
               CONTINUE
             </button>
