@@ -4,9 +4,9 @@ import store from './store';
 
 // const Home = dynamic(() => import('../components/Home'), { ssr: false });
 // const Field = dynamic(() => import('../components/Field'), { ssr: false });
-const Form = dynamic(() => import('../components/Form'), { ssr: false });
+// const Form = dynamic(() => import('../components/Form'), { ssr: false });
 // const Myform = dynamic(() => import('../components/Myform'), { ssr: false });
-
+const Main = dynamic(() => import('../components/Main'), { ssr: false });
 
 const index = () => {
   return (
@@ -15,7 +15,8 @@ const index = () => {
       {/* <Field/> */}
       <Provider  store={store}>
       {/* <Myform/> */}
-      <Form/>
+      {/* <Form/> */}
+      <Main/>
       </Provider>
     </div>
   );
