@@ -7,8 +7,8 @@ import ZimoInternship from '../public/images/zimo-internship.png'
 const Home = () => {
   const options = [
     { value: 'pakistan', label: 'Pakistan' },
-    { value: 'italy', label: 'Italy' },
-    { value: 'iran', label: 'Iran' },
+    { value: 'united states', label: 'United States' },
+    { value: 'united kingdome', label: 'Uniked Kingdome' },
   ];
 
   const customStyles = {
