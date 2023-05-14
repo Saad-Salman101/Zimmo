@@ -99,7 +99,7 @@ const Form = () => {
   const customStyles = {
     control: (provided) => ({
       ...provided,
-      width: 100,
+      width: 130,
       height: 50,
       borderRadius: 10,
       borderColor: "#BE9F56",
@@ -122,7 +122,8 @@ const Form = () => {
 
   return (
     <>
-      <div className="w-32">
+    <div className="flex flex-start">
+      <div className="w-[20%]">
         <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
           APPLY
         </div>
@@ -134,18 +135,20 @@ const Form = () => {
         </button>
       </div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-[70%] flex justify-center  mt-5">
         <div className="relative flex flex-col justify-around items-center font-Lato  w-[50rem] ">
-          <div className="text-2xl font-Lato font -uppercase mb-5 tracking-[2px]">
-            {" "}
-            YOUR APPLICATION{" "}
+
+          <div className="mb-20">
+          <div className="text-2xl font-Lato font -uppercase mb-5 tracking-[2px]">            
+            YOUR APPLICATION
           </div>
           <div>
             <div className="flex items-center justify-center gap-x-2 my-2">
-              <div className="bg-[#BE9f56] h-[2px] w-[60px] lg:w-[20px]"></div>
-              <div className="bg-black h-[2px] w-[60px] lg:w-[20px]"></div>
-              <div className="bg-black h-[2px] w-[60px] lg:w-[20px]"></div>
+              <div className="bg-[#BE9f56] h-[2px] w-[2rem] lg:w-[3rem]"></div>
+              <div className="bg-black h-[2px] w-[2rem] lg:w-[3rem]"></div>
+              <div className="bg-black h-[2px] w-[2rem] lg:w-[3rem]"></div>
             </div>
+          </div>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -156,7 +159,7 @@ const Form = () => {
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 required=""
                 placeholder="EMAIL ADDRESS"
-                className="tracking-[2px] md:tracking-[0px] w-[90%] placeholder:text-black placeholder:font-normal placeholder:text-[18px]  placeholder:tracking-[2px]  max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[0px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px]  placeholder:tracking-[2px]  max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleEmailChange}
                 value={email}
               />
@@ -168,7 +171,7 @@ const Form = () => {
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 required=""
                 placeholder="CONFIRM EMAIL ADDRESS"
-                className="tracking-[2px] md:tracking-[2px] w-[90%] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleConfirmEmailChange}
                 value={confirmemail}
               />
@@ -179,7 +182,7 @@ const Form = () => {
                 id="name"
                 required=""
                 placeholder="FIRST NAME"
-                className="tracking-[2px] md:tracking-[2px] w-[90%] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={(event) => setFirstName(event.target.value)}
                 value={firstname}
               />
@@ -193,7 +196,7 @@ const Form = () => {
                 id="lastname"
                 required=""
                 placeholder="LAST NAME INCLUDING MIDDLE NAME"
-                className="tracking-[2px] md:tracking-[2px] w-[90%] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleLastChange}
                 value={lastname}
               />{" "}
@@ -202,17 +205,16 @@ const Form = () => {
               <input
                 type="date"
                 id="date"
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 required=""
                 placeholder="DD/MM/YYYY"
-                className="tracking-[2px] md:tracking-[2px] w-[90%] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleDateChange}
                 value={date}
               />
             </div>
 
             <div className="my-2">
-              <div className="text-black font-normal text-[18px] lg:text-[18px] md:text-[18px]  md:tracking-[2px] tracking-[2px] w-[20rem] max-w-[700px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] uppercase">
+              <div className="text-black font-normal text-[18px] lg:text-[18px] md:text-[18px]  md:tracking-[2px] tracking-[2px] w-[35rem] max-w-[700px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] uppercase">
                 Pakistan
               </div>
             </div>
@@ -232,7 +234,7 @@ const Form = () => {
                 id="phone"
                 required=""
                 placeholder="PHONE NUMBER"
-                className="tracking-[2px] md:tracking-[2px] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] w-40% text-center  bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none focus:bg-transparent"
+                className="tracking-[2px] ml-3 md:tracking-[2px] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] w-[26rem] text-center  bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none focus:bg-transparent"
                 onChange={handlePhoneChange}
                 value={phone}
               />
@@ -246,6 +248,8 @@ const Form = () => {
             </button>
           </form>
         </div>
+      </div>
+
       </div>
       <div className="w-full flex justify-around my-10">
         <div>
