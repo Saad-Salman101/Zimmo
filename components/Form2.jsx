@@ -12,16 +12,24 @@ import Select from "react-select";
 const validationSchema = Yup.object().shape({
     email: Yup.string()
         .email('Invalid email')
-        .required('Email is required'),
+        .required(<div className="text-red-500 ml-[12rem] upper
+        ">EMAIL IS REQUIRED</div>),
     confirmemail: Yup.string()
-        .email('Invalid email')
-        .required('Email is required'),
+    .email('Invalid email')
+    .required(<div className="text-red-500 ml-[12rem] upper
+    ">EMAIL IS REQUIRED</div>),
     firstname: Yup.string()
-        .required('first name is required'),
+        .required(<div className="text-red-500 ml-[12rem] upper
+        ">FIRST NAME IS REQUIRED</div>),
     lastname: Yup.string()
-        .required('last name is required'),
+        .required(<div className="text-red-500 ml-[12rem] upper
+        ">LAST NAME IS REQUIRED</div>),
     date: Yup.string()
-        .required('Date is required'),
+        .required(<div className="text-red-500 ml-[12rem] upper
+        ">Date IS REQUIRED</div>),
+        phonenumber: Yup.string()
+        .required(<div className="text-red-500 ml-[12rem] upper
+        ">PHONE NUMBER IS REQUIRED</div>),
 });
 
 
@@ -144,7 +152,7 @@ const Form2 = () => {
                     </div>
 
                     <Formik
-                        initialValues={{ email: '', password: '' }}
+                        initialValues={{ email: '', confirmemail: '',firstname:'',lastname:'',date:'' }}
                         validationSchema={validationSchema}
                         onSubmit={(values) => {
                             console.log(values);
@@ -193,8 +201,8 @@ const Form2 = () => {
                                         onChange={handleChange}
                                         isRequired
                                     />
-                                    <Field type="tel" name="phone" placeholder="Phone number" className=" ml-2 w-[10rem] md:w-[25rem] tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
-                                    <ErrorMessage name="phone" />
+                                    <Field type="tel" name="phonenumber" placeholder="Phone number" className=" ml-2 w-[10rem] md:w-[25rem] tracking-[2px] md:tracking-[2px] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <ErrorMessage name="phonenumber" />
                                 </div>
 
 
