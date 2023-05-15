@@ -122,10 +122,10 @@ const Form2 = () => {
     return (
         <>
             <div className="flex md:flex-start">
-                <div className="w-[20%]">
-                    <div className="text-black md:text-2xl text-lg   py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
-                        APPLY
-                    </div>
+                <div className="w-[15%]">
+                <div className="text-black text-2xl ml-8 mt-2  mb-10 font-Lato font-[20px] cursor-pointer">
+                      APPLY
+                     </div>
                     <button onClick={subBtn}>
                         <div className="text-black md:text-2xl text-lg  l py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
                             <Image src={BackArrow} alt="" height={10} width={15} /> BACK
@@ -161,11 +161,11 @@ const Form2 = () => {
                         {({ isSubmitting }) => (
                             <Form>
                                 <div>
-                                    <Field type="email" name="email" placeholder="Email" className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="email" name="email" placeholder="Email" className=" mb-2 tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="email" />
                                 </div>
                                 <div>
-                                    <Field type="email" name="conformemail" placeholder="Confirm Email" className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="email" name="conformemail" placeholder="Confirm Email" className="mb-6 tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="conform email" />
                                 </div>
 
@@ -173,11 +173,11 @@ const Form2 = () => {
                                     <Field type="text" name="firstname" placeholder="First Name" className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="firstname" />
                                 </div>
-                                <div className="text-[14px] md:text-[12px] text-[#737373] 2xl:static text-center ">
+                                <div className="mb-3 text-[14px] md:text-[12px] text-[#737373] 2xl:static text-center ">
                                     Use your legal name as it appears on your official documents
                                 </div>
                                 <div>
-                                    <Field type="text" name="lastname" placeholder="LAST NAME INCLUDING MIDDLE NAME" className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="text" name="lastname" placeholder="LAST NAME INCLUDING MIDDLE NAME" className="mb-6 tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="lastname" />
                                 </div>
 
@@ -218,27 +218,18 @@ const Form2 = () => {
             </div>
 
 
-            <div className="w-full flex justify-around my-10 mt-32">
-                <div>
-                    <Image
-                        src={ZimoTeam}
-                        alt="Zimo Career"
-                        width={300}
-                        height={45}
-                        className="mt-10 mb-10 ml-4"
-                    />
-                </div>
-                <div className="w-[30%]"></div>
-                <div>
-                    <Image
-                        src={ZimoInternship}
-                        alt="Zimo Career"
-                        width={120}
-                        height={100}
-                        className="mt-10 mb-10"
-                    />
-                </div>
-            </div>
+            <div className='w-full flex justify-between  mt-20 '> 
+      <div className='ml-10  flex-col flex-end'>
+        <div> .</div>
+      <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-12 mb-10' />
+      </div>
+      <div className='w-[30%]'>
+        
+      </div>
+      <div className='mr-5 mb-5'>
+      <Image src={ZimoInternship} alt='Zimo Career' width={100} height={100} className='mt-5 mb-10' />
+      </div>
+      </div>
         </>
     );
 };

@@ -1,23 +1,27 @@
-import React,{useState} from 'react';
-import Select from 'react-select';
+// import React,{useState} from 'react';
+// import Select from 'react-select';
 import Image from 'next/image';
 import ZimoCareer from '../public/images/zimo-careers.png';
 import ZimoTeam from '../public/images/zimo-team.png'
 import ZimoInternship from '../public/images/zimo-internship.png'
 import { useSelector,useDispatch } from 'react-redux';
 import BackArrow from '../public/images/back-arrow.png'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 
-const Home = () => {
-  const options = [
-    { value: 'project coordinator', label: 'PROJECT COORDINATOR' },
-    { value: 'frontend next js', label: 'FRONTEND NEXT JS' },
-    { value: 'backend laravel & node js', label: 'BACKEND LARAVEL & NODE JS' },
-  ];
+const Feild = () => {
 
   const dispatch = useDispatch();
-  const {c} = useSelector((state)=>state.custom)
+  const {c,role} = useSelector((state)=>state.custom)
   console.log(c)
+  {role!==null ? console.log(role) : console.log('0123')}
+
+// const setfield = ()=>{
+//   dispatch(
+// {    type: "setrole",}
+//   );
+// };
+
 const addBtn = ()=>{
   dispatch(
 {    type: "increament",}
@@ -28,82 +32,106 @@ const subBtn = ()=>{
 {    type: "decrement",}
   );
 };
+const setrole = (myvalue)=>{
+  dispatch(
+{    type: "setrole",
+payload:myvalue
+}
 
-  const customStyles = {
-    control: (provided) => ({
-      ...provided,
-      width: 400,
-      height: 40,
-      borderRadius: 10,
-      borderColor: '#BE9F56',
-    }),
-    placeholder: (provided) => ({
-      ...provided,
-      textTransform: 'uppercase',
-      fontSize: '20px',
-      fontWeight: 'bold',
-      textAlign: 'center',
-      
-    }),
+
+  );
+};
+
+
+  const handleSubmit = (values, { setSubmitting }) => {
+    console.log('Form submitted with values:', values);
+    addBtn();
+    setrole(values);
+    setSubmitting(false);
   };
 
-  const defaultOption = { value: 'default', label: 'CHOOSE YOUR ROLE (FIELD)' };
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (selectedOption) {
-      addBtn();
-      console.log('Form submitted with option:', selectedOption);
-    } else {
-      console.log('Please select an option');
+  const validate = (values) => {
+    const errors = {};
+    if (!values.role) {
+      errors.role = 'Please select a role';
     }
+    return errors;
   };
 
-  const handleChange = (selectedOption) => {
-    setSelectedOption(selectedOption);
-  };
+  const roles = [
+    { value: 'project coordinator', label: 'PROJECT COORDINATOR' },
+    { value: 'frontend next js', label: 'FRONTEND NEXT JS' },
+    { value: 'backend laravel & node js', label: 'BACKEND LARAVEL & NODE JS' },
+  ];
   return (
     <>
-       <div className="w-32 ">
-        <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+      <div className="w-[20%] ">
+        <div className="text-black text-2xl ml-8 mt-2  mb-10 font-Lato font-[20px] cursor-pointer">
           APPLY
         </div>
-        <button onClick={subBtn} > <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer"><Image src={BackArrow} alt="" height={10} width={15} /> BACK</div></button>
+        <button  onClick={subBtn}>
+          {" "}
+          <div className="text-black text-2xl py-2  px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+            <Image src={BackArrow} alt="" height={10} width={15} /> BACK
+          </div>
+        </button>
       </div>
-      <div className='w-full flex justify-center'>
-        <div className="relative  flex flex-col justify-around items-center font-Lato border-2 rounded-xl border-custom-golden w-[700px] h-[400px] border-3 border-custom-golden">
-          <div className='font-[20px] font-Lato uppercase mt-3 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
-          <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10' />
-            <form onSubmit={handleSubmit}>
-          <Select
-            options={options}
-            defaultValue={defaultOption}
-            styles={customStyles}
-            placeholder="SELECT YOUR COUNTRY"
-            isSearchable={false}
-            onChange={handleChange}
-            className='mb-5 '
-            isRequired
-          />
-          <button type='submit' > 
-          <div className='absolute w-[100x] h-[100px] p-10 pt-17 pb-17 rounded-lg right-[50px] bottom-[-70px]  md:right-[-60px] md:bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'>Start</div></button>
-          </form>
+      <div className='w-full flex justify-center mt-10'>
+        <div className="relative flex flex-col justify-around items-center font-Lato border-[1px] rounded-xl  w-[80%]  md:w-[700px] h-[400px] border-3 border-custom-golden">
+          <div className='font-[20px] font-Lato uppercase mt-6 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
+          <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10'/>
+          <Formik
+          initialValues={{ role: role}}
+          validate={validate}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <Field
+                component='select'
+                name='role'
+                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
+              >
+                <option value='' disabled>Select your role</option>
+                {roles.map((myrole) => (
+                  <option key={myrole.value} value={myrole.value}>
+                    {myrole.label}
+                  </option>
+                ))}
+              </Field>
+              <ErrorMessage
+                name='role'
+                component='div'
+                className='text-red-500 text-sm mt-1 '
+              />
+              <button
+                type='submit'
+                disabled={isSubmitting}
+                className='absolute w-[120px] h-[120px] md:w-[120px] md:h-[120px] p-10 pt-17 pb-17 rounded-lg right-1/3 bottom-[-100px]  md:right-[-60px] md:bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'
+              >
+                APPLY
+              </button>
+            </Form>
+          )}
+        </Formik>
         </div>
       </div>
-      <div className='w-full flex justify-around my-10'> 
-      <div>
-      <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-10 mb-10 ml-4' />
+
+
+      <div className='w-full flex justify-between  mt-20 '> 
+      <div className='ml-10  flex-col flex-end'>
+        <div> .</div>
+      <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-12 mb-10' />
       </div>
       <div className='w-[30%]'>
         
       </div>
-      <div>
-      <Image src={ZimoInternship} alt='Zimo Career' width={120} height={100} className='mt-10 mb-10' />
+      <div className='mr-5 mb-5'>
+      <Image src={ZimoInternship} alt='Zimo Career' width={100} height={100} className='mt-5 mb-10' />
       </div>
       </div>
     </>
   );
 };
 
-export default Home;
+export default Feild;
