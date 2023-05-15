@@ -65,14 +65,14 @@ const subBtn = ()=>{
   };
   return (
     <>
-       <div className="w-32">
+       <div className="w-32 ">
         <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
           APPLY
         </div>
         <button onClick={subBtn} > <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer"><Image src={BackArrow} alt="" height={10} width={15} /> BACK</div></button>
       </div>
       <div className='w-full flex justify-center'>
-        <div className="relative flex flex-col justify-around items-center font-Lato border-2 rounded-xl border-custom-golden w-[700px] h-[400px] border-3 border-custom-golden">
+        <div className="relative  flex flex-col justify-around items-center font-Lato border-2 rounded-xl border-custom-golden w-[700px] h-[400px] border-3 border-custom-golden">
           <div className='font-[20px] font-Lato uppercase mt-3 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
           <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10' />
             <form onSubmit={handleSubmit}>
@@ -86,7 +86,8 @@ const subBtn = ()=>{
             className='mb-5 '
             isRequired
           />
-          <button type='submit' > <div className='absolute w-[100x] h-[100px] p-10 pt-17 pb-17 rounded-lg right-[-60px] bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'>APPLY</div></button>
+          <button type='submit' > 
+          <div className='absolute w-[100x] h-[100px] p-10 pt-17 pb-17 rounded-lg right-[50px] bottom-[-70px]  md:right-[-60px] md:bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'>Start</div></button>
           </form>
         </div>
       </div>

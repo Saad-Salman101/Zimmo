@@ -122,14 +122,14 @@ const Form = () => {
 
   return (
     <>
-    <div className="flex flex-start">
+    <div className="flex md:flex-start">
       <div className="w-[20%]">
-        <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+        <div className="text-black md:text-2xl text-lg   py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
           APPLY
         </div>
         <button onClick={subBtn}>
           {" "}
-          <div className="text-black text-2xl py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+          <div className="text-black md:text-2xl text-lg  l py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
             <Image src={BackArrow} alt="" height={10} width={15} /> BACK
           </div>
         </button>
@@ -139,7 +139,7 @@ const Form = () => {
         <div className="relative flex flex-col justify-around items-center font-Lato  w-[50rem] ">
 
           <div className="mb-20">
-          <div className="text-2xl font-Lato font -uppercase mb-5 tracking-[2px]">            
+          <div className="md:text-2xl text-lg  font-Lato font -uppercase mb-5 tracking-[2px]">            
             YOUR APPLICATION
           </div>
           <div>
@@ -159,7 +159,7 @@ const Form = () => {
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 required=""
                 placeholder="EMAIL ADDRESS"
-                className="tracking-[2px] md:tracking-[0px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px]  placeholder:tracking-[2px]  max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[0px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px]  placeholder:tracking-[2px]  max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleEmailChange}
                 value={email}
               />
@@ -171,7 +171,7 @@ const Form = () => {
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 required=""
                 placeholder="CONFIRM EMAIL ADDRESS"
-                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleConfirmEmailChange}
                 value={confirmemail}
               />
@@ -182,7 +182,7 @@ const Form = () => {
                 id="name"
                 required=""
                 placeholder="FIRST NAME"
-                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={(event) => setFirstName(event.target.value)}
                 value={firstname}
               />
@@ -196,7 +196,7 @@ const Form = () => {
                 id="lastname"
                 required=""
                 placeholder="LAST NAME INCLUDING MIDDLE NAME"
-                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleLastChange}
                 value={lastname}
               />{" "}
@@ -207,14 +207,14 @@ const Form = () => {
                 id="date"
                 required=""
                 placeholder="DD/MM/YYYY"
-                className="tracking-[2px] md:tracking-[2px] w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 onChange={handleDateChange}
                 value={date}
               />
             </div>
 
             <div className="my-2">
-              <div className="text-black font-normal text-[18px] lg:text-[18px] md:text-[18px]  md:tracking-[2px] tracking-[2px] w-[35rem] max-w-[700px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] uppercase">
+              <div className="text-black font-normal text-[18px] lg:text-[18px] md:text-[18px]  md:tracking-[2px] tracking-[2px] w-[12rem] md:w-[35rem] max-w-[700px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] uppercase">
                 Pakistan
               </div>
             </div>
@@ -234,7 +234,7 @@ const Form = () => {
                 id="phone"
                 required=""
                 placeholder="PHONE NUMBER"
-                className="tracking-[2px] ml-3 md:tracking-[2px] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] w-[26rem] text-center  bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none focus:bg-transparent"
+                className="tracking-[2px] ml-3 md:tracking-[2px] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] w-[10rem] md:w-[26rem] text-center  bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] outline-none focus:bg-transparent"
                 onChange={handlePhoneChange}
                 value={phone}
               />
@@ -242,7 +242,7 @@ const Form = () => {
 
             <button
               type="submit"
-              className="absolute md:right-[-60px] md:bottom-2 lg:flex items-center justify-center  h-[120px] w-[120px] bg-black text-white tracking-widest text-[14px] rounded-lg text-center uppercase"
+              className="absolute right-[150px] md:right-[-60px] md:bottom-2 lg:flex items-center justify-center  h-[120px] w-[120px] bg-black text-white tracking-widest text-[14px] rounded-lg text-center uppercase"
             >
               CONTINUE
             </button>
@@ -251,7 +251,7 @@ const Form = () => {
       </div>
 
       </div>
-      <div className="w-full flex justify-around my-10">
+      <div className="w-full flex justify-around my-10 mt-32">
         <div>
           <Image
             src={ZimoTeam}

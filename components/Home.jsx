@@ -61,7 +61,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className="w-[20%]">
+      <div className="w-[20%] ">
         <div className="text-black text-2xl py-2 px-4 mt-4  mb-10 font-Lato font-[20px] cursor-pointer">
           APPLY
         </div>
@@ -73,7 +73,7 @@ const Home = () => {
         </button>
       </div>
       <div className='w-full flex justify-center'>
-        <div className="relative flex flex-col justify-around items-center font-Lato border-2 rounded-xl border-custom-golden w-[700px] h-[400px] border-3 border-custom-golden">
+        <div className="relative flex flex-col justify-around items-center font-Lato border-2 rounded-xl border-custom-golden sm:w-[400px]  md:w-[700px] h-[400px] border-3 border-custom-golden">
           <div className='font-[20px] font-Lato uppercase mt-3 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
           <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10' />
             <form onSubmit={handleSubmit}>
@@ -88,11 +88,11 @@ const Home = () => {
             isRequired
           />
           <button type='submit' > 
-          <div className='absolute w-[100x] h-[100px] p-10 pt-17 pb-17 rounded-lg right-[-60px] bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'>Start</div></button>
+          <div className='absolute w-[100x] h-[100px] p-10 pt-17 pb-17 rounded-lg right-[50px] bottom-[-70px]  md:right-[-60px] md:bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'>Start</div></button>
           </form>
         </div>
       </div>
-      <div className='w-full flex justify-around my-10'> 
+      <div className='w-full flex justify-around my-10 mt-20'> 
       <div>
       <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-10 mb-10 ml-4' />
       </div>
