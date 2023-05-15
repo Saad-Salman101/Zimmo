@@ -119,7 +119,6 @@ const Form2 = () => {
                         APPLY
                     </div>
                     <button onClick={subBtn}>
-                        {" "}
                         <div className="text-black md:text-2xl text-lg  l py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
                             <Image src={BackArrow} alt="" height={10} width={15} /> BACK
                         </div>
