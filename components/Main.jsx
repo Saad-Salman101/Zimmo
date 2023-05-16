@@ -5,7 +5,8 @@ import Field from './Field'
 import Form from './Form2';
 const Main = () => {
 
-    const {c} = useSelector((state)=>state.custom)
+    let {c} = useSelector((state)=>state.custom)
+  
 if (c==0){
   return (
     <>

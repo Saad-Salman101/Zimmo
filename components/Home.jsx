@@ -1,4 +1,4 @@
-// import React,{useState} from 'react';
+// import React,{useEffect} from 'react';
 // import Select from 'react-select';
 import Image from 'next/image';
 import ZimoCareer from '../public/images/zimo-careers.png';
@@ -7,20 +7,28 @@ import ZimoInternship from '../public/images/zimo-internship.png'
 import { useSelector,useDispatch } from 'react-redux';
 import BackArrow from '../public/images/back-arrow.png'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import Dropdown from '../public/images/dropdown-arrow.png'
 
-
-const Home = () => {
+const Home = ({mycountry}) => {
 
   const dispatch = useDispatch();
   const {c,country} = useSelector((state)=>state.custom)
   console.log(c)
   {country!==null ? console.log(country) : console.log('0123')}
+console.log(mycountry)
 
+// const [initialValues, setInitialValues] = useState({ country: '' });
 // const setfield = ()=>{
 //   dispatch(
 // {    type: "setrole",}
 //   );
 // };
+
+// useEffect(() => {
+//   if (country !== null) {
+//     setInitialValues({ country });
+//   }
+// }, [country]);
 
 const addBtn = ()=>{
   dispatch(
@@ -59,24 +67,24 @@ payload:myvalue
     { value: 'united kingdom', label: 'United Kingdom' },
   ];
   return (
-    <>
-      <div className="w-[20%] ">
-        <div className="text-black text-2xl ml-8 mt-2  mb-10 font-Lato font-[20px] cursor-pointer">
+    <div className='flex-col justify-between'>
+      <div className="w-[20%]  h-[2vw]">
+        <div className="text-black text-2xl ml-8 mt-6  font-Lato text-[20px] tracking-[2px] cursor-pointer">
           APPLY
         </div>
         <button >
           {" "}
-          <div className="text-black text-2xl py-2 hidden px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+          <div className="text-black ml-8 mt-1 font-Lato text-[20px] tracking-[2px] cursor-pointer">
             <Image src={BackArrow} alt="" height={10} width={15} /> BACK
           </div>
         </button>
       </div>
-      <div className='w-full flex justify-center mt-10'>
+      <div className='w-full flex justify-center items-center  h-[45vw]'>
         <div className="relative flex flex-col justify-around items-center font-Lato border-[1px] rounded-xl  w-[80%]  md:w-[700px] h-[400px] border-3 border-custom-golden">
           <div className='font-[20px] font-Lato uppercase mt-6 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
           <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10'/>
           <Formik
-          initialValues={{ country: country}}
+          initialValues={{ country: country ? country.country : '' }}
           validate={validate}
           onSubmit={handleSubmit}
         >
@@ -85,7 +93,7 @@ payload:myvalue
               <Field
                 component='select'
                 name='country'
-                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
+                className="tracking-[2px] md:tracking-[2px] md:w-[20vw] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
               >
                 <option value='' disabled>Select your country</option>
                 {countries.map((country) => (
@@ -113,19 +121,22 @@ payload:myvalue
       </div>
 
 
-      <div className='w-full flex justify-between  mt-20 '> 
-      <div className='ml-10  flex-col flex-end'>
+      <div className='w-full flex justify-between  mt-20  h-[10vw] '> 
+      <div className='ml-10  flex-col flex-end'  style={{ width: '25%', height: 'auto' }}>
         <div> .</div>
-      <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-12 mb-10' />
+        <div> .</div>
+      <Image src={ZimoTeam} alt='Zimo Career' layout='responsive' className='mt-12 mb-10' />
       </div>
       <div className='w-[30%]'>
         
       </div>
-      <div className='mr-5 mb-5'>
-      <Image src={ZimoInternship} alt='Zimo Career' width={100} height={100} className='mt-5 mb-10' />
+      <div className='mr-10 mb-5  flex-col flex-end' style={{ width: '7%', height: 'auto' }}>
+  <Image src={ZimoInternship} alt='Zimo Career' layout='responsive' className='mt-2 mb-10' />
+  <div>.</div>
+  <div>.</div>
+</div>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 

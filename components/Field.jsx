@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // import React,{useState} from 'react';
 // import Select from 'react-select';
 import Image from 'next/image';
@@ -64,24 +65,26 @@ payload:myvalue
     { value: 'backend laravel & node js', label: 'BACKEND LARAVEL & NODE JS' },
   ];
   return (
-    <>
-      <div className="w-[20%] ">
-        <div className="text-black text-2xl ml-8 mt-2  mb-10 font-Lato font-[20px] cursor-pointer">
+    <div className=' flex-col justify-between '>
+      <div className="w-[20%]  h-[2vw]  ">
+        <div className="text-black text-2xl ml-8 mt-6  font-Lato text-[20px] tracking-[2px] cursor-pointer">
           APPLY
         </div>
         <button  onClick={subBtn}>
           {" "}
-          <div className="text-black text-2xl py-2  px-4 mt-4 font-Lato font-[20px] cursor-pointer">
-            <Image src={BackArrow} alt="" height={10} width={15} /> BACK
+          <div className="text-black ml-8 mt-1 font-Lato text-[20px] tracking-[2px] cursor-pointer">
+            <Image src={BackArrow} alt="" height={15} width={20} /> BACK
           </div>
         </button>
       </div>
-      <div className='w-full flex justify-center mt-10'>
+
+      
+      <div className='w-full flex justify-center items-center  h-[45vw]  '>
         <div className="relative flex flex-col justify-around items-center font-Lato border-[1px] rounded-xl  w-[80%]  md:w-[700px] h-[400px] border-3 border-custom-golden">
           <div className='font-[20px] font-Lato uppercase mt-6 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
           <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10'/>
           <Formik
-          initialValues={{ role: role}}
+          initialValues={{ role: role ? role.role : '' }}
           validate={validate}
           onSubmit={handleSubmit}
         >
@@ -90,7 +93,7 @@ payload:myvalue
               <Field
                 component='select'
                 name='role'
-                className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
+                className="tracking-[2px] md:tracking-[2px] w-[20vw] md:w-[20vw] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
               >
                 <option value='' disabled>Select your role</option>
                 {roles.map((myrole) => (
@@ -118,19 +121,22 @@ payload:myvalue
       </div>
 
 
-      <div className='w-full flex justify-between  mt-20 '> 
-      <div className='ml-10  flex-col flex-end'>
+      <div className='w-full flex justify-between  mt-20  h-[10vw] '> 
+      <div className='ml-10  flex-col flex-end'  style={{ width: '25%', height: 'auto' }}>
         <div> .</div>
-      <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-12 mb-10' />
+        <div> .</div>
+      <Image src={ZimoTeam} alt='Zimo Career' layout='responsive' className='mt-12 mb-10' />
       </div>
       <div className='w-[30%]'>
         
       </div>
-      <div className='mr-5 mb-5'>
-      <Image src={ZimoInternship} alt='Zimo Career' width={100} height={100} className='mt-5 mb-10' />
+      <div className='mr-10 mb-5  flex-col flex-end' style={{ width: '7%', height: 'auto' }}>
+  <Image src={ZimoInternship} alt='Zimo Career' layout='responsive' className='mt-2 mb-10' />
+  <div>.</div>
+  <div>.</div>
+</div>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 
