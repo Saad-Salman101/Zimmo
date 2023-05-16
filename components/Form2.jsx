@@ -123,11 +123,11 @@ const Form2 = () => {
         <>
             <div className="flex md:flex-start">
                 <div className="w-[15%]">
-                <div className="text-black text-2xl ml-8 mt-2  mb-10 font-Lato font-[20px] cursor-pointer">
+                <div className="text-black md:text-2xl text-lg ml-8 mt-2  font-Lato font-[20px] cursor-pointer">
                       APPLY
                      </div>
                     <button onClick={subBtn}>
-                        <div className="text-black md:text-2xl text-lg  l py-2 px-4 mt-4 font-Lato font-[20px] cursor-pointer">
+                        <div className="text-black md:text-2xl text-lg  l py-2 px-4 mt-4  md:mt-2 font-Lato font-[20px] cursor-pointer">
                             <Image src={BackArrow} alt="" height={10} width={15} /> BACK
                         </div>
                     </button>
@@ -136,7 +136,7 @@ const Form2 = () => {
 
 
                 <div className="w-[70%] flex justify-center mt-5">
-                <div className="relative flex flex-col justify-around items-center font-Lato  w-[50rem] ">
+                <div className="relative flex flex-col justify-around items-center font-Lato mt-4 w-[50rem] ">
 
                     <div className="mb-20">
                         <div className="md:text-2xl text-lg  font-Lato font -uppercase mb-5 tracking-[2px]">
@@ -161,32 +161,32 @@ const Form2 = () => {
                         {({ isSubmitting }) => (
                             <Form>
                                 <div>
-                                    <Field type="email" name="email" placeholder="Email" className=" mb-2 tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="email" name="email" placeholder="Email" className=" mb-2 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="email" />
                                 </div>
                                 <div>
-                                    <Field type="email" name="conformemail" placeholder="Confirm Email" className="mb-6 tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="email" name="conformemail" placeholder="Confirm Email" className="mb-6 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="conform email" />
                                 </div>
 
                                 <div>
-                                    <Field type="text" name="firstname" placeholder="First Name" className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="text" name="firstname" placeholder="First Name" className="tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="firstname" />
                                 </div>
-                                <div className="mb-3 text-[14px] md:text-[12px] text-[#737373] 2xl:static text-center ">
+                                <div className="mb-3 text-[14px] w-[70vw] md:text-[12px] text-[#737373] 2xl:static text-center ">
                                     Use your legal name as it appears on your official documents
                                 </div>
                                 <div>
-                                    <Field type="text" name="lastname" placeholder="LAST NAME INCLUDING MIDDLE NAME" className="mb-6 tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="text" name="lastname" placeholder="LAST NAME INCLUDING MIDDLE NAME" className="mb-6 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="lastname" />
                                 </div>
 
                                 <div>
-                                    <Field type="date" name="date" placeholder="DD/MM/YYYY" className="tracking-[2px] md:tracking-[2px] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                    <Field type="date" name="date" placeholder="DD/MM/YYYY" className="tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                     <ErrorMessage name="date" />
                                 </div>
                                 <div className="my-2">
-                                    <div className="text-black font-normal text-[18px] lg:text-[18px] md:text-[18px]  md:tracking-[2px] tracking-[2px] w-[12rem] md:w-[35rem] max-w-[700px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] uppercase">
+                                    <div className="text-black font-normal text-[18px] lg:text-[18px] md:text-[18px]  md:tracking-[2px] tracking-[2px] w-[70vw] md:w-[35rem] max-w-[700px]  outline-none bg-transparent  border placeholder:text-center text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] uppercase">
                                         Pakistan
                                     </div>
                                 </div>
@@ -206,7 +206,7 @@ const Form2 = () => {
                                 </div>
 
 
-                                <button type="submit" disabled={isSubmitting} className="absolute right-[150px] md:right-[-60px] md:bottom-2 lg:flex items-center justify-center  h-[120px] w-[120px] bg-black text-white tracking-widest text-[14px] rounded-lg text-center uppercase">
+                                <button type="submit" disabled={isSubmitting} className="absolute right-[150px] md:right-[-60px] md:bottom-2 lg:flex items-center justify-center h-[90px] w-[100px] md:h-[120px] md:w-[120px] bg-black text-white tracking-widest text-[14px] rounded-lg text-center uppercase">
                                     CONTINUE
                                 </button>
                             </Form>
