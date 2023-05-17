@@ -143,8 +143,8 @@ const Form2 = () => {
                             }}
                         >
                             {({ isSubmitting }) => (
-
-                                <div  className="formContainer overflow-x-hidden">
+                                
+                                <div className="overflow-x-hidden">
                                 <Form>
                                     <div>
                                         <Field type="email" name="email" placeholder="Email address" className=" mb-2 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
@@ -187,7 +187,7 @@ const Form2 = () => {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center justify-center my-2 mr-[10vw] ">
+                                    <div className="flex items-center justify-center my-2 mr-[10vw] md:ml-2  md:w-[40vw] ">
                                         <Select
                                             options={options}
                                             defaultValue={defaultOption}
@@ -197,7 +197,7 @@ const Form2 = () => {
                                             onChange={handleChange}
                                             isRequired
                                         />
-                                        <Field type="tel" name="phonenumber" placeholder="Phone number" className=" md:mr-[25rem] ml-2 w-[45vw] md:w-[26rem] tracking-[2px] md:tracking-[2px] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                        <Field type="tel" name="phonenumber" placeholder="Phone number" className="  ml-2 w-[45vw]  tracking-[2px] md:tracking-[2px] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                         <ErrorMessage name="phonenumber" />
                                     </div>
 
