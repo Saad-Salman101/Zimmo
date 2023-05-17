@@ -12,23 +12,23 @@ import Select from "react-select";
 const validationSchema = Yup.object().shape({
     email: Yup.string()
         .email('Invalid email')
-        .required(<div className="text-red-500 ml-[12rem] upper
+        .required(<div className="text-red-500 ml-[2rem] md:ml-[12rem] upper
         ">EMAIL IS REQUIRED</div>),
-    confirmemail: Yup.string()
+    email2: Yup.string()
         .email('Invalid email')
-        .required(<div className="text-red-500 ml-[12rem] upper
+        .required(<div className="text-red-500 md:ml-[12rem] upper
     ">EMAIL IS REQUIRED</div>),
     firstname: Yup.string()
-        .required(<div className="text-red-500 ml-[12rem] upper
+        .required(<div className="text-red-500 md:ml-[12rem] upper
         ">FIRST NAME IS REQUIRED</div>),
     lastname: Yup.string()
-        .required(<div className="text-red-500 ml-[12rem] upper
+        .required(<div className="text-red-500 md:ml-[12rem] upper
         ">LAST NAME IS REQUIRED</div>),
     date: Yup.string()
-        .required(<div className="text-red-500 ml-[12rem] upper
+        .required(<div className="text-red-500 md:ml-[12rem] upper
         ">Date IS REQUIRED</div>),
     phonenumber: Yup.string()
-        .required(<div className="text-red-500 ml-[12rem] upper
+        .required(<div className="text-red-500 ml-[2rem] md:ml-[12rem] upper
         ">PHONE NUMBER IS REQUIRED</div>),
 });
 
@@ -149,8 +149,8 @@ const Form2 = () => {
                                         <ErrorMessage name="email" />
                                     </div>
                                     <div>
-                                        <Field type="email" name="conformemail" placeholder="Confirm Email address" className="mb-6 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
-                                        <ErrorMessage name="conform email" />
+                                        <Field type="email" name="email2" placeholder="Confirm Email address" className="mb-6 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
+                                        <ErrorMessage name="email2" />
                                     </div>
 
                                     <div>
@@ -213,7 +213,7 @@ const Form2 = () => {
 
 
 
-            <div className='w-full flex justify-between  md:mt-10   '>
+            <div className='w-full flex justify-between mt-20  md:mt-10   '>
                 <div className='ml-10  flex-col flex-end'>
                     <div> .</div>
                     <Image src={ZimoTeam} alt='Zimo Career' width={300} height={45} className='mt-12 mb-10' />

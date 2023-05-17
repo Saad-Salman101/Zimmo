@@ -80,7 +80,7 @@ const Feild = () => {
       </div>
 
 
-      <div className='w-full flex justify-center items-center  h-[45vw] md:mt-0 mt-[200px]'>
+      <div className='w-full flex justify-center items-center  h-[60%] md:mt-0 mt-[200px]'>
         <div className="relative flex flex-col justify-around items-center font-Lato border-[1px] rounded-xl  w-[80%]  md:w-[700px] h-[400px] border-3 border-custom-golden">
           <div className='font-[20px] font-Lato uppercase mt-6 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
           <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10' />
@@ -94,7 +94,7 @@ const Feild = () => {
                 <Field
                   component='select'
                   name='role'
-                  className="tracking-[2px] md:tracking-[2px] w-[40vw] md:w-[20vw] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
+                  className="tracking-[2px] md:tracking-[2px] w-[40vw] md:w-[20vw] placeholder:uppercase placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none"
                 >
                   <option value='' disabled>Select your role</option>
                   {roles.map((myrole) => (
@@ -122,20 +122,20 @@ const Feild = () => {
       </div>
 
 
-      <div className='w-full flex justify-between mt-[200px] md:mt-20  h-[10vw] '>
-        <div className='ml-10  flex-col  flex-end md:w-[7%] h-auto w-[40%]'>
-          <div> .</div>
-          <div> .</div>
-          <Image src={ZimoTeam} alt='Zimo Career' layout='responsive' className='mt-12 mb-10' />
-        </div>
-        <div className='w-[30%]'>
-
-        </div>
-        <div className='mr-10 mb-5  flex-col flex-end md:w-[7%] h-auto w-[40%]' >
-          <Image src={ZimoInternship} alt='Zimo Career' layout='responsive' className='mt-0 mb-10' />
-          <div>.</div>
-          <div>.</div>
-        </div>
+      <div className='w-full flex justify-between mt-[200px] md:mt-10  h-[10vw] '> 
+      <div className='ml-10  flex-col flex-end md:w-[20%] h-auto w-[40%]'>
+        <div> .</div>
+        <div> .</div>
+      <Image src={ZimoTeam} alt='Zimo Career' layout='responsive' className='mt-12 mb-10' />
+      </div>
+      <div className='w-[20%]'>
+        
+      </div>
+      <div className='mr-10 mb-5  flex-col flex-end md:w-[10%] h-auto w-[20%]'>
+  <Image src={ZimoInternship} alt='Zimo Career' layout='responsive' className='mt-2 mb-10' />
+  <div>.</div>
+  <div>.</div>
+</div>
       </div>
     </div>
   );
