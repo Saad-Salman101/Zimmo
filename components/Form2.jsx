@@ -143,6 +143,8 @@ const Form2 = () => {
                             }}
                         >
                             {({ isSubmitting }) => (
+
+                                <div  className="formContainer overflow-x-hidden">
                                 <Form>
                                     <div>
                                         <Field type="email" name="email" placeholder="Email address" className=" mb-2 tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
@@ -204,6 +206,7 @@ const Form2 = () => {
                                         CONTINUE
                                     </button>
                                 </Form>
+                                </div>
                             )}
                         </Formik>
                     </div>
