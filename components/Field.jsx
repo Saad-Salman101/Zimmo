@@ -80,7 +80,7 @@ const Feild = () => {
       </div>
 
 
-      <div className='w-full flex justify-center items-center  h-[45vw]  '>
+      <div className='w-full flex justify-center items-center  h-[45vw] md:mt-0 mt-[200px]'>
         <div className="relative flex flex-col justify-around items-center font-Lato border-[1px] rounded-xl  w-[80%]  md:w-[700px] h-[400px] border-3 border-custom-golden">
           <div className='font-[20px] font-Lato uppercase mt-6 mb-5 tracking-[2px]'> START YOUR APPLICATION </div>
           <Image src={ZimoCareer} alt='Zimo Career' className='mt-10 mb-10' />
@@ -111,7 +111,7 @@ const Feild = () => {
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className='absolute w-[120px] h-[120px] md:w-[120px] md:h-[120px] p-10 pt-17 pb-17 rounded-lg right-1/3 bottom-[-100px]  md:right-[-60px] md:bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'
+                  className='absolute w-[120px] h-[100px] md:w-[120px] md:h-[120px] p-10 pt-17 pb-17 rounded-lg right-1/3 bottom-[-100px]  md:right-[-60px] md:bottom-2 text-white bg-black font-[20px] font-Lato uppercase text-center justify-center'
                 >
                   APPLY
                 </button>
@@ -122,8 +122,8 @@ const Feild = () => {
       </div>
 
 
-      <div className='w-full flex justify-between md:mt-0 mt-20  h-[10vw] '>
-        <div className='ml-10  flex-col flex-end' style={{ width: '25%', height: 'auto' }}>
+      <div className='w-full flex justify-between mt-[200px] md:mt-20  h-[10vw] '>
+        <div className='ml-10  flex-col  flex-end md:w-[7%] h-auto w-[40%]'>
           <div> .</div>
           <div> .</div>
           <Image src={ZimoTeam} alt='Zimo Career' layout='responsive' className='mt-12 mb-10' />
@@ -131,7 +131,7 @@ const Feild = () => {
         <div className='w-[30%]'>
 
         </div>
-        <div className='mr-10 mb-5  flex-col flex-end' style={{ width: '7%', height: 'auto' }}>
+        <div className='mr-10 mb-5  flex-col flex-end md:w-[7%] h-auto w-[40%]' >
           <Image src={ZimoInternship} alt='Zimo Career' layout='responsive' className='mt-0 mb-10' />
           <div>.</div>
           <div>.</div>
