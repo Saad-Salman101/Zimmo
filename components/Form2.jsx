@@ -109,7 +109,7 @@ const Form2 = () => {
 
                 </div>
 
-                <div className="mb-20 mr-32 mt-4">
+                <div className="md:mb-20 mr-32 md:mt-4">
                     <div className="md:text-2xl text-lg md:mr-32  md:mt-4 font-Lato font-uppercase mb-5 tracking-[2px]">
                         YOUR APPLICATION
                     
@@ -157,7 +157,7 @@ const Form2 = () => {
                                         <Field type="text" name="firstname" placeholder="First Name" className="tracking-[2px] md:tracking-[2px] w-[70vw] md:w-[35rem] placeholder:text-black placeholder:font-semibold placeholder:uppercase placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" />
                                         <ErrorMessage name="firstname" />
                                     </div>
-                                    <div className="mb-3 text-[14px] w-[40vw] md:text-[12px] text-[#737373] 2xl:static text-center  ">
+                                    <div className="mb-3 text-[14px] w-[65vw] md:w-[40vw] md:text-[12px] text-[#737373] 2xl:static text-center  ">
                                         Use your legal name as it appears on your official documents
                                     </div>
                                     <div>

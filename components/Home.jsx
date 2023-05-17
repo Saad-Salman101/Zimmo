@@ -91,7 +91,7 @@ payload:myvalue
               <Field
                 component='select'
                 name='country'
-                className="tracking-[2px] md:tracking-[2px] w-[20vw] md:w-[20vw] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
+                className="tracking-[2px] md:tracking-[2px] w-[40vw] md:w-[20vw] placeholder:text-black placeholder:font-normal placeholder:text-[18px] placeholder:md:text-[18px] placeholder:tracking-[2px] placeholder:md:tracking-[2px] max-w-[580px] text-center     bg-transparent border placeholder:text-center border-gray-500/50 rounded-xl p-3 focus:border-[#BE9F56] focus:bg-transparent outline-none" 
               >
                 <option value='' disabled>Select your country</option>
                 {countries.map((country) => (
